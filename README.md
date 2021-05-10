@@ -9,4 +9,4 @@ Got a question? email ecommerce@boipa.com for support.
 ## Installation Guides
 For instructions on how to install the plugin on PrestaShop please use the following link:
 
-* [Magento 2] (https://github.com/BOIPA/Magento_2/wiki/Installation-of-BOIPA-plugin-for-Magento-2.x)
+* [Magento 2](https://github.com/BOIPA/Magento_2/wiki/Installation-of-BOIPA-plugin-for-Magento-2.x)
