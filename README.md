@@ -7,6 +7,6 @@ This plugin is provided for BOIPA merchants using Magento 2.
 Got a question? email ecommerce@boipa.com for support.
 
 ## Installation Guides
-For instructions on how to install the plugin on PrestaShop please use the following link:
+For instructions on how to install the plugin on Magento 2 please use the following link:
 
 * [Magento 2](https://github.com/BOIPA/Magento_2/wiki/Installation-of-BOIPA-plugin-for-Magento-2.x)
