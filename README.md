@@ -5,8 +5,6 @@ BOIPA plugin for Magento 2.x
 
 This plugin is provided for BOIPA merchants using Magento 2.x.
 
-For further instructions on how to install the plugin on WooCommerce please go to our Wiki [here](https://github.com/BOIPA/WooCommerce_plugin/wiki/Installation-of-BOIPA-Plugin-for-WooCommerce).
-
 Got a question? 
 For support email <ecommerce@boipa.com>
 
