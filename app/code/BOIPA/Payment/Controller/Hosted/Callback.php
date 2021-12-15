@@ -98,15 +98,15 @@ class Callback extends \Magento\Framework\App\Action\Action
         );
         $gatewayTransaction = $this->_helper->executeGatewayTransaction("GET_STATUS", $params);
         if ($gatewayTransaction->result == 'success') {
-            // notify customer with the email
-            if (!$order->getEmailSent()) {
-                $this->orderSender->send($order);
-            }
             $realStatus = $gatewayTransaction->status;
             if ($realStatus == 'SET_FOR_CAPTURE' ||$realStatus == 'CAPTURED' ) { //PURCHASE was successful or transaction captured
                 if($order->getStatus() != \Magento\Sales\Model\Order::STATE_PROCESSING && $order->getStatus() != \Magento\Sales\Model\Order::STATE_COMPLETE){
                     if($order->getState() == 'Paid'){
                         return false;
+                    }
+                    // notify customer with the email
+                    if (!$order->getEmailSent()) {
+                        $this->orderSender->send($order);
                     }
                     $order->setState("Paid")
                     ->setStatus("pending")
@@ -122,6 +122,10 @@ class Callback extends \Magento\Framework\App\Action\Action
             } else if ($realStatus == 'NOT_SET_FOR_CAPTURE') { // AUTH was successful
                 if($order->getState() == 'Authorized'){
                     return false;
+                }
+                // notify customer with the email
+                if (!$order->getEmailSent()) {
+                    $this->orderSender->send($order);
                 }
                 $order->setState('Authorized')
                 ->setStatus("pending")
